@@ -122,7 +122,7 @@ hover:scale-105
                 </div>
 
                 <h3
-                  className="text-xl font-semibold mb-3
+                  className="text-lg md:text-xl font-semibold mb-3
       text-white/30
       transition-all duration-300
       group-hover:text-cyan-500">
