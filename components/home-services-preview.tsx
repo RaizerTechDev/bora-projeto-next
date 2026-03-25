@@ -115,7 +115,13 @@ hover:shadow-[0_0_40px_rgba(56,189,248,0.8)]
                   {/* CTA */}                                    
                   <div className="mt-4 flex items-center text-cyan-300 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-10px] group-hover:translate-x-0">
   
-                    <span className="text-sm font-medium">Saiba mais</span>
+                    <Link href="https://api.whatsapp.com/send?phone=5192364249&text=Vamos%20conversar%20sobre%20o%20projeto%20Bora!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+
+                    className="text-sm font-medium">
+                    Saiba mais
+                    </Link>
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </div>
                 </CardContent>
