@@ -70,32 +70,66 @@ function SolutionCard({ solution, index }: { solution: typeof solutions[0], inde
       transition={{ duration: 0.6 }}
       className="group"
     >
-      <div className="card-hover relative rounded-3xl border border-border hover:border-primary overflow-hidden bg-card">
+      <div className="
+                card-hover bg-card 
+              border border-sky-500/40
+  rounded-xl
+  h-full cursor-pointer
+  animate-neon-border-blue
+  transition-all duration-300
+    hover:border-transparent
+  hover:bg-[linear-gradient(135deg,#0f172a,#1e3a8a,#1e40af)]
+shadow-[0_0_25px_rgba(56,189,248,0.5)]
+hover:shadow-[0_0_40px_rgba(56,189,248,0.8)] 
+               group h-full 
+               cursor-pointer
+      ">
+
         <div className="relative p-8 lg:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/30 group-hover:neon-box transition-all duration-300">
-                <solution.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
+              <div className="w-16 h-16 
+              bg-blue-500/10 rounded-xl flex items-center justify-center mb-6  group-hover:bg-cyan-400/20
+      group-hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300">
+
+                <solution.icon className="w-8 h-8 text-blue-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
               </div>
               <h2 
-                className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-500 ${
-                  isInView ? 'text-primary neon-text' : 'text-foreground'
+
+                   className={`text-2xl md:text-3xl font-bold mb-4 text-cyan-300
+      transition-all duration-300 group-hover:text-white" ${
+                  isInView ? "bg-[linear-gradient(to_right,#00F5FF,#3B82F6,#1E3A8A)] bg-clip-text text-transparent hover:text-white"
+                  : "text-foreground"
                 }`}
-              >
+              >         
                 {solution.title}
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6 group-hover:text-foreground/80 transition-colors duration-300">
+
+              <p className="text-muted-background text-lg leading-relaxed mb-6 group-hover:text-foreground/80 transition-colors duration-300">
                 {solution.description}
               </p>
-              <Button asChild className="btn-neon bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link href="/contato">
+
+              <Button asChild className="
+                   bg-cyan-500/90  hover:bg-cyan-400
+                  hover:text-white
+                  rounded-xl
+                  transition-all duration-300
+                  shadow-[0_0_25px_rgba(0,255,255,0.5)]
+                  hover:shadow-[0_0_40px_rgba(0,255,255,0.8)]    
+                  font-bold
+              ">
+                <Link  href="https://api.whatsapp.com/send?phone=5192364249&text=Vamos%20conversar%20sobre%20o%20projeto%20Bora!"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   Saiba mais
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-              </Button>
+              </Button>              
             </div>
+
             <div className="bg-secondary/50 rounded-2xl p-6 lg:p-8 group-hover:bg-secondary/70 transition-colors duration-300">
-              <h3 className="text-lg font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+              
+              <h3 className="text-lg font-semibold text-foreground mb-4 group-hover:text-cyan-500 transition-colors duration-300">
                 O que entregamos:
               </h3>
               <ul className="space-y-3">
@@ -108,7 +142,7 @@ function SolutionCard({ solution, index }: { solution: typeof solutions[0], inde
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: featureIndex * 0.1 }}
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5 icon-glow" />
+                    <CheckCircle2 className="w-5 h-5 text-cyan-300 shrink-0 mt-0.5 icon-glow" />
                     <span className="text-foreground/90">{feature}</span>
                   </motion.li>
                 ))}
@@ -138,21 +172,28 @@ function CTASection() {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 
-            className={`text-3xl md:text-4xl font-bold mb-6 text-balance transition-all duration-700 ${
-              isInView ? 'text-primary neon-text' : 'text-foreground'
+      className={`text-3xl md:text-5xl font-bold mt-4 mb-6 text-balance transition-all duration-700 ${
+              isInView ? "bg-[linear-gradient(to_right,#00F5FF,#3B82F6,#1E3A8A)] bg-clip-text text-transparent"
+        : "text-foreground"
             }`}
           >
             Pronto para elevar sua engenharia?
           </h2>
-          <p className="text-muted-foreground text-lg mb-8">
+          <p className="text-muted-background text-lg mb-8">
             Vamos conversar sobre como nossas soluções podem transformar seu negócio.
           </p>
-          <Button asChild size="lg" className="btn-neon bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="/contato">
-              Agendar reunião
+
+          <Button asChild size="lg" className="btn-neon bg-cyan-500 text-primary-foreground 
+          hover:bg-gray-200 hover:text-blue font-bold
+          ">
+            <Link href="https://api.whatsapp.com/send?phone=5192364249&text=Vamos%20conversar%20sobre%20o%20projeto%20Bora!"
+                  target="_blank"
+                  rel="noopener noreferrer">
+              Fale com um consultor
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </Button>
+
         </motion.div>
       </div>
     </section>
@@ -172,7 +213,13 @@ export function SolutionsPageContent() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="text-primary text-sm font-medium uppercase tracking-wider neon-text-subtle">Soluções</span>
+            <span className="text-sm 
+              font-medium uppercase tracking-wider
+            bg-[linear-gradient(to_right,#00F5FF,#3B82F6)]
+            bg-clip-text text-transparent
+            ">
+              Soluções
+              </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mt-4 mb-6 text-balance">
               Engenharia de Alta Performance
             </h1>

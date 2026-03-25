@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { SolutionsPageContent } from "@/components/solutions-page-content"
 
 export const metadata: Metadata = {
-  title: "Soluções | Eximia.co",
+  title: "Soluções | Bora",
   description: "Engenharia de Alta Performance para Negócio, Dados, Aplicações e Infraestrutura.",
 }
 
