@@ -1,10 +1,10 @@
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { HomeServicesPreview } from "@/components/home-services-preview"
-import { HomeSolutionsPreview } from "@/components/home-solutions-preview"
-import { CTASection } from "@/components/cta-section"
-import { Footer } from "@/components/footer"
-import { StatsSection } from "@/components/states-section"
+import { Header } from "@/components/header";
+import { HeroSection } from "@/components/hero-section";
+import { HomeServicesPreview } from "@/components/home-services-preview";
+import { HomeSolutionsPreview } from "@/components/home-solutions-preview";
+import { CTASection } from "@/components/cta-section";
+import { Footer } from "@/components/footer";
+import { StatsSection } from "@/components/states-section";
 
 export default function HomePage() {
   return (
@@ -17,5 +17,5 @@ export default function HomePage() {
       <CTASection />
       <Footer />
     </main>
-  )
+  );
 }

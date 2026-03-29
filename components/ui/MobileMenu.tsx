@@ -1,37 +1,33 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Menu } from "lucide-react"
+import Link from "next/link";
+import { Menu } from "lucide-react";
 
 // Importamos os componentes necessários para acessibilidade
-import { 
-  Sheet, 
-  SheetContent, 
-  SheetTrigger, 
-  SheetClose, 
-  SheetHeader, 
-  SheetTitle, 
-  SheetDescription 
-} from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
-
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/servicos", label: "Serviços" },
   { href: "/solucoes", label: "Soluções" },
   { href: "/ia", label: "Fábrica de IAs" },
-  { href: "/encontro", label: "Encontros" },
-]
+];
 
 export function MobileMenu() {
   return (
-
     <Sheet>
       {/* BOTÃO QUE ABRE O MENU */}
       <SheetTrigger asChild>
         <button className="p-2 text-white outline-none hover:bg-white/10 rounded-lg transition-colors">
-
           <Menu size={28} />
         </button>
       </SheetTrigger>
@@ -40,7 +36,7 @@ export function MobileMenu() {
       <SheetContent
         side="right"
         className="w-[280px] sm:w-[320px] bg-gradient-to-b from-[#567CAB] to-[#2A4C75] text-white border-none flex flex-col p-6"
-      >   
+      >
         {/* 🔥 ISSO RESOLVE O ERRO VERMELHO DA SUA IMAGEM */}
         <SheetHeader className="text-left mb-8">
           <SheetTitle className="text-white text-xl font-bold">Menu</SheetTitle>
@@ -73,7 +69,7 @@ export function MobileMenu() {
                   font-bold
                   h-12"
             >
-              <Link 
+              <Link
                 href="https://api.whatsapp.com/send?phone=5192364249"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,8 +79,7 @@ export function MobileMenu() {
             </Button>
           </SheetClose>
         </div>
-
       </SheetContent>
     </Sheet>
-  )
+  );
 }

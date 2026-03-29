@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { ConteudosPageContent } from "@/components/conteudos-page-content"
 
 export const metadata: Metadata = {
-  title: "Conteúdos | Eximia.co",
+  title: "Conteúdos | Bora",
   description: "Lives de conteúdos técnicos disponíveis quinzenalmente em nosso canal do YouTube.",
 }
 

@@ -33,7 +33,6 @@ export function HomeSolutionsPreview() {
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: true, margin: "-100px" });
 
-
   return (
     <section className="py-24 relative bg-secondary/30">
       <div className="container mx-auto px-6">
@@ -45,7 +44,6 @@ export function HomeSolutionsPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-
             <span
               className="
                  text-sm font-medium uppercase tracking-wider
@@ -56,10 +54,11 @@ export function HomeSolutionsPreview() {
               Soluções
             </span>
 
-                <h2 
+            <h2
               className={`text-3xl md:text-5xl font-bold mt-4 mb-6 text-balance transition-all duration-700 ${
-                isInView ? "bg-[linear-gradient(to_right,#00F5FF,#3B82F6,#1E3A8A)] bg-clip-text text-transparent"
-                  : "text-foreground"    
+                isInView
+                  ? "bg-[linear-gradient(to_right,#00F5FF,#3B82F6,#1E3A8A)] bg-clip-text text-transparent"
+                  : "text-foreground"
               }`}
             >
               Engenharia de Alta Performance
@@ -82,7 +81,6 @@ export function HomeSolutionsPreview() {
                   hover:shadow-[0_0_40px_rgba(0,255,255,0.8)]    
                   font-bold"
             >
-
               <Link href="/solucoes">
                 Conheça nossas soluções
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -98,39 +96,39 @@ export function HomeSolutionsPreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-
                 className="
                  p-6 
-                               card-hover bg-card 
-              border border-sky-500/40
-  rounded-xl
-  h-full cursor-pointer
-  animate-neon-border-blue
-  transition-all duration-300
-    hover:border-transparent
-  hover:bg-[linear-gradient(135deg,#0f172a,#1e3a8a,#1e40af)]
-shadow-[0_0_25px_rgba(56,189,248,0.5)]
-hover:shadow-[0_0_40px_rgba(56,189,248,0.8)]
-hover:scale-105
+                card-hover bg-card 
+              border border-blue-500
+              rounded-xl
+              h-full cursor-pointer
+              animate-neon-border-blue
+              transition-all duration-300
+                hover:border-transparent
+              hover:bg-[linear-gradient(135deg,#0f172a,#1e3a8a,#1e40af)]
+            shadow-[0_0_25px_rgba(56,189,248,0.5)]
+            hover:shadow-[0_0_40px_rgba(56,189,248,0.8)]
+            hover:scale-105
                 "
               >
-                <div className="w-14 h-14
+                <div
+                  className="w-14 h-14
                   bg-blue-500/10 rounded-xl flex items-center justify-center mb-6  group-hover:bg-cyan-400/20
-      group-hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300">
-
-                  <solution.icon className="w-7 h-7  text-blue-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
+      group-hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300"
+                >
+                  <solution.icon className="w-7 h-7 text-blue-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
                 </div>
 
                 <h3
                   className="text-lg md:text-xl font-semibold mb-3
       text-white/30
       transition-all duration-300
-      group-hover:text-cyan-500">
+      group-hover:text-cyan-500"
+                >
                   {solution.title}
                 </h3>
 
                 <p className="text-muted-background text-sm group-hover:text-foreground/80 transition-colors duration-300">
-
                   {solution.description}
                 </p>
               </motion.div>

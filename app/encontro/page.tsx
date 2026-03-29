@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { EncontroPageContent } from "@/components/encontro-page-content"
 
 export const metadata: Metadata = {
-  title: "Blog | Eximia.co",
+  title: "Blog | Bora",
   description: "Artigos técnicos e de negócios elaborados pelo nosso time de consultores.",
 }
 

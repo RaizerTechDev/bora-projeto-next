@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { IAPageContent } from "@/components/ia-page-content"
 
 export const metadata: Metadata = {
-  title: "Fábrica de IAs | Eximia.co",
+  title: "Fábrica de IAs | Bora",
   description: "IA aplicada ao trabalho real. Transformamos processos complexos em fluxos inteligentes e automatizados.",
 }
 
