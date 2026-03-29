@@ -70,7 +70,7 @@ export function MobileMenu() {
                   h-12"
             >
               <Link
-                href="https://api.whatsapp.com/send?phone=5192364249"
+                   href="https://api.whatsapp.com/send?phone=5192364249&text=Olá!%20Quero%20falar%20com%20um%20especialista%20da%20empresa%20Bora."
                 target="_blank"
                 rel="noopener noreferrer"
               >
